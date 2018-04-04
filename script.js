@@ -4,8 +4,60 @@ function display(a){
 
 function bkspace () {
 	var a = document.getElementById('screen').value;
-	a = a.substr(0, a.length - 1);
-	document.getElementById('screen').value = a;
+	// Testing ground
+	// console.log(a);
+
+	var n = a.length;
+	// console.log(n);
+
+	// To print the last char '('
+	var last_char = a.charAt(n - 1);
+	// console.log(last_char);
+
+	// // This works for cos, sin, tan, log
+	// // var chars_trig = a.charAt(n - 4);
+	// // console.log(chars_trig);
+	var last_chars = a.slice(n-4, n);
+	// console.log(last_chars);
+
+
+	// // This works for arcsin, arccos, arctan
+	// // var chars_arc = a.charAt(n -7);
+	// // console.log(chars_arc);
+	var last_arc = a.slice(n-7, n);
+	// console.log(last_arc);
+
+
+	// // This works for sinh, cosh
+	// // var chars_hyp = a.charAt(n - 5);
+	// // console.log(chars_hyp);
+	var last_hyp = a.slice(n-5, n);
+	// console.log(last_hyp);
+
+
+	if ( (last_arc == 'arcsin(') || (last_arc == 'arccos(') || (last_arc == 'arctan(') ) {
+		// console.log(last_arc);
+		a = a.substr(0, n-7);
+		document.getElementById('screen').value = a;
+		// console.log(a);
+
+	} else if ( (last_hyp == 'sinh(') || (last_hyp == 'cosh(') ) {
+		// console.log(last_hyp);
+		a = a.substr(0, n-5);
+		document.getElementById('screen').value = a;
+		// console.log(a);
+		
+	} else if ( (last_chars == 'cos(') || (last_chars == 'sin(') || (last_chars == 'tan(') || (last_chars == 'log(') ) {
+		// console.log(last_chars);
+		a = a.substr(0, n-4);
+		document.getElementById('screen').value = a;
+		// console.log(a);
+		
+	} else{
+		a = a.substr(0, a.length - 1);
+		document.getElementById('screen').value = a;
+
+	}
 }
 
 function cls_screen () {
