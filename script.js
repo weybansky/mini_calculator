@@ -29,23 +29,23 @@ function ans (){
 }
 
 function sin (a) {
-		a = Number(a);
-		return Math.sin(a * Math.PI / 180);
+	a = Number(a);
+	return Math.sin(a * Math.PI / 180);
 }
 
 function arcsin(a){
-		a = Number();
-		return Math.asin(a * Math.PI / 180);
+	a = Number();
+	return Math.asin(a * Math.PI / 180);
 }
 
 function sinh (a) {
-		a = Number(a);
-		return Math.sinh(a * Math.PI / 180);
+	a = Number(a);
+	return Math.sinh(a * Math.PI / 180);
 }
 
 function cos (a) {
-		a = Number(a);
-		return Math.cos(a * Math.PI / 180); 
+	a = Number(a);
+	return Math.cos(a * Math.PI / 180); 
 }
 
 function arccos (a) {
@@ -54,14 +54,14 @@ function arccos (a) {
 }
 
 function cosh (a) {
-		a = Number(a);
-		return Math.cosh(a * Math.PI / 180);
+	a = Number(a);
+	return Math.cosh(a * Math.PI / 180);
 }
 
 function tan (a) {
-		a = Number(a);
-		// return (Math.sin(a * Math.PI / 180)) / (Math.cos(a * Math.PI / 180));
-		return Math.tan(a * Math.PI / 180);
+	a = Number(a);
+	// return (Math.sin(a * Math.PI / 180)) / (Math.cos(a * Math.PI / 180));
+	return Math.tan(a * Math.PI / 180);
 }
 
 function arctan (a) {
@@ -70,8 +70,8 @@ function arctan (a) {
 }
 
 function ln (a) {
-		a = Number(a);
-		return Math.log(a);
+	a = Number(a);
+	return Math.log(a);
 }
 
 function log (a) {
@@ -80,5 +80,11 @@ function log (a) {
 }
 
 function sqrt (a) {
-	alert("Hello");
+	a = Number(a);
+	return Math.sqrt(a);
+}
+
+function cbrt (a) {
+	a = Number(a);
+	return Math.cbrt(a);
 }
