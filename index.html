@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+	<section id="calc">
+		<div class="" style="margin: 60px auto;width: 330px;">
+			
+			<div style="border: 1px solid #555; background-color: #555;padding: 15px 10px;border-radius: 10px;">
+				<p class="text-center" style="color: #fff;font-weight: bold;">Mini Calculator</p>
+				<form action="" name="form">
+					<div class="input">
+						<input name="screen" type="text" id="screen" style="width: 100%; height: 60px;font-size: 24px;padding: 0px 10px;" placeholder="expression" value="">
+
+						<!-- <input name="hidden_screen" type="text" id="hidden_screen" style="width: 100%; height: 60px;font-size: 24px;padding: 0px 10px;" placeholder="expression" value=""> -->
+						
+						<input name="ans" type="text" id="ans" readonly style="width: 100%; height: 30px;padding: 0px 10px;text-align: right;font-size: 16px;" placeholder="ans=" value="">
+					</div>
+
+					<div class="button1">
+						<a href="#" onclick="display('sin(') " id="sin" class="btn btn-danger">
+							sin
+						</a>
+						<a href="#" onclick="display('cos(')" class="btn btn-danger">
+							cos
+						</a>
+						<a href="#" onclick="display('tan(')" class="btn btn-danger">
+							tan
+						</a>
+						<a href="#" onclick="display('ln(')" class="btn btn-danger">
+							ln
+						</a>
+						<a href="#" onclick="display('log(')" class="btn btn-danger">
+							log
+						</a>
+					</div>
+
+					<div class="button1">
+						<a href="#" onclick="display('arcsin(') " id="sin" class="btn btn-danger">
+							sin<sup>-1</sup>
+						</a>
+						<a href="#" onclick="display('arccos(')" class="btn btn-danger">
+							cos<sup>-1</sup>
+						</a>
+						<a href="#" onclick="display('arctan(')" class="btn btn-danger">
+							tan<sup>-1</sup>
+						</a>
+						<a href="#" onclick="display('sinh(')" class="btn btn-danger">
+							sinh
+						</a>
+						<a href="#" onclick="display('cosh(')" class="btn btn-danger">
+							cosh
+						</a>
+					</div>
+
+					<div class="button">
+						<a href="#" onclick="display('9')" class="btn btn-default">
+							9	
+						</a>
+						<a href="#" onclick="display('8')" class="btn btn-default">
+							8	
+						</a>
+						<a href="#" onclick="display('7')" class="btn btn-default">
+							7
+						</a>
+						<a href="#" onclick="display('+')" class="btn btn-default">
+							+
+						</a>
+						<a href="#" onclick="" class="btn btn-primary">
+							X<sup>2</sup>	
+						</a>
+						<a href="#" onclick="" class="btn btn-primary">
+							X<sup>3</sup>
+						</a>
+					</div>
+
+					<div class="button">
+						<a href="#" onclick="display('6')" class="btn btn-default">
+							6	
+						</a>
+						<a href="#" onclick="display('5')" class="btn btn-default">
+							5	
+						</a>
+						<a href="#" onclick="display('4')" class="btn btn-default">
+							4
+						</a>
+						<a href="#" onclick="display('*')" class="btn btn-default">
+							x
+						</a>
+						<a href="#" onclick="display('sqrt;(')" class="btn btn-primary">
+							&radic;
+						</a>
+						<a href="#" onclick="display('cbrt')" class="btn btn-primary">
+							<sup style="font-size: 8px;vertical-align: middle;">3</sup>&radic;
+						</a>
+					</div>
+
+					<div class="button">
+						<a href="#" onclick="display('3')" class="btn btn-default">
+							3	
+						</a>
+						<a href="#" onclick="display('2')" class="btn btn-default">
+							2	
+						</a>
+						<a href="#" onclick="display('1')" class="btn btn-default">
+							1
+						</a>
+						<a href="#" onclick="display('-')" class="btn btn-default">
+							-
+						</a>
+						<a href="#" onclick="display('!')" class="btn btn-primary">
+							!
+						</a>
+						<a href="#" onclick="bkspace()" class="btn btn-default">
+							<i class="fas fa-long-arrow-alt-left"></i>
+						</a>
+					</div>
+
+					<div class="button">
+						<a href="#" onclick="display('0')" class="btn btn-default">
+							0	
+						</a>
+						<a href="#" onclick="display('.')" class="btn btn-default">
+							.
+						</a>
+						<a href="#" onclick="display('%')" class="btn btn-default">
+							%	
+						</a>
+						<a href="#" onclick="display('/')" class="btn btn-default">
+							/ 
+						</a>
+						<a href="#" onclick="display('(')" class="btn btn-default">
+							(	
+						</a>
+						<a href="#" onclick="display(')')" class="btn btn-default">
+							)	
+						</a>
+					</div>
+
+					<div class="form-group">
+						<a href="#" onclick="cls_screen()" class="btn btn-warning" style="width: 44px;">
+							CE
+						</a>
+						<a href="#" onclick="" class="btn btn-warning" style="width: 44px;">
+							A
+						</a>
+						<a href="#" onclick="" class="btn btn-warning" style="width: 44px;">
+							B
+						</a>
+						<a href="#" onclick="ans()" class="btn btn-success" style="width: 140px;">
+							=
+						</a>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</section>
+	
+	<script src="script.js"></script>
+</body>
+</html>

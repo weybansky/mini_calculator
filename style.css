@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Electrolize');
+body{
+	font-family: 'Electrolize', sans-serif;
+}
+
+form div{
+	padding: 5px 10px;
+}
+
+.button1 a{
+		width: 54px;
+		/*width: 18.7%;*/
+	}
+
+.button a{
+	width: 44px;
+}
