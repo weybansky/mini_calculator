@@ -1,4 +1,11 @@
+var answered=false;
+var Ans;
+
 function display(a){
+	if(answered){
+		document.getElementById('screen').value = "";
+		answered=false;
+	}
 	document.getElementById('screen').value += a;
 }
 
@@ -46,13 +53,13 @@ function bkspace () {
 		a = a.substr(0, n-5);
 		document.getElementById('screen').value = a;
 		// console.log(a);
-		
+
 	} else if ( (last_chars == 'cos(') || (last_chars == 'sin(') || (last_chars == 'tan(') || (last_chars == 'log(') ) {
 		// console.log(last_chars);
 		a = a.substr(0, n-4);
 		document.getElementById('screen').value = a;
 		// console.log(a);
-		
+
 	} else{
 		a = a.substr(0, a.length - 1);
 		document.getElementById('screen').value = a;
@@ -75,9 +82,10 @@ function ans (){
 	}
 	else {
 		// alert(ans);
-		answer = eval(ans);
-		document.getElementById('ans').value = answer;
+		Ans = eval(ans);
+		document.getElementById('ans').value = Ans;
 	}
+	answered=true;
 }
 
 function sin (a) {
@@ -97,7 +105,7 @@ function sinh (a) {
 
 function cos (a) {
 	a = Number(a);
-	return Math.cos(a * Math.PI / 180); 
+	return Math.cos(a * Math.PI / 180);
 }
 
 function arccos (a) {
